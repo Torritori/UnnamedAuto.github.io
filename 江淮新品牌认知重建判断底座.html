@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>江淮新品牌认知重建判断底座</title>
+  <style>
+    :root {
+      --ink: #050505;
+      --paper: #ffffff;
+      --muted: #666666;
+      --soft: #f3f3f3;
+      --line: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.65;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+      border-right: 1px solid var(--line);
+      background: var(--paper);
+      padding: 24px 18px;
+    }
+
+    .brand-kicker {
+      margin: 0 0 8px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sidebar h1 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .sidebar-note {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 0;
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .index-title {
+      margin: 20px 0 8px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .index {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .index a {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .index-number {
+      font-weight: 700;
+    }
+
+    .index-label {
+      color: var(--ink);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      align-content: end;
+      padding: 64px clamp(28px, 6vw, 88px) 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      width: max-content;
+      max-width: 100%;
+      border: 1px solid var(--line);
+      padding: 6px 8px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h2 {
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(44px, 8vw, 112px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .hero-summary {
+      max-width: 920px;
+      margin: 28px 0 0;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .statement,
+    .mini-panel,
+    .logic-block,
+    .callout,
+    .then,
+    .data-card,
+    .diagram-cell {
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .statement {
+      padding: 20px;
+      font-size: 20px;
+      line-height: 1.55;
+      font-weight: 650;
+    }
+
+    .mini-panel {
+      display: grid;
+      align-content: space-between;
+      padding: 18px;
+      min-height: 156px;
+    }
+
+    .mini-panel strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .mini-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 0 clamp(22px, 5.5vw, 72px) 72px;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+      border-bottom: 1px solid var(--line);
+      padding: 56px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 26px;
+    }
+
+    .section-no {
+      border: 1px solid var(--line);
+      padding: 10px;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 54px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 34px 0 12px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .core {
+      border-left: 8px solid var(--line);
+      padding: 14px 18px;
+      margin: 0 0 24px;
+      background: var(--soft);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .text-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .logic-block {
+      padding: 18px;
+    }
+
+    .logic-block h3 {
+      margin-top: 0;
+    }
+
+    .logic-block p:last-child,
+    .then p:last-child,
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .then {
+      margin-top: 24px;
+      padding: 18px;
+      border-width: 2px;
+    }
+
+    .then-title {
+      display: block;
+      width: max-content;
+      max-width: 100%;
+      margin: -19px 0 14px;
+      padding: 2px 8px;
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .callout {
+      margin-top: 24px;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: 650;
+      background: var(--soft);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1fr 44px 1fr 44px 1fr;
+      gap: 0;
+      margin: 24px 0;
+      border: 1px solid var(--line);
+    }
+
+    .flow .diagram-cell {
+      border: 0;
+      border-right: 1px solid var(--line);
+      padding: 16px;
+      min-height: 142px;
+    }
+
+    .flow .diagram-cell:last-child {
+      border-right: 0;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      border-right: 1px solid var(--line);
+      font-size: 24px;
+      font-weight: 800;
+      background: var(--soft);
+    }
+
+    .diagram-label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .diagram-main {
+      display: block;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .diagram-note {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      margin: 24px 0;
+    }
+
+    .timeline-item {
+      padding: 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .timeline-item:last-child {
+      border-right: 0;
+    }
+
+    .timeline-item b {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .timeline-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .split-map {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      margin: 24px 0;
+    }
+
+    .split-map > div {
+      padding: 18px;
+    }
+
+    .split-map > div:first-child {
+      border-right: 1px solid var(--line);
+    }
+
+    .split-map h3 {
+      margin-top: 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+      border: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      background: var(--paper);
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    th {
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 800;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 0;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      padding: 4px 8px;
+      font-size: 13px;
+      font-weight: 700;
+      background: var(--paper);
+    }
+
+    mark,
+    .hl {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0 0.24em;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .compact-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      margin: 22px 0;
+    }
+
+    .compact-list div {
+      padding: 14px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .compact-list div:nth-child(2n) {
+      border-right: 0;
+    }
+
+    .compact-list div:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      margin: 24px 0;
+    }
+
+    .rule-grid > div {
+      min-height: 164px;
+      padding: 16px;
+      border-right: 1px solid var(--line);
+    }
+
+    .rule-grid > div:last-child {
+      border-right: 0;
+    }
+
+    .rule-grid b {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .footer-space {
+      height: 40px;
+    }
+
+    @media (max-width: 980px) {
+      .page {
+        display: block;
+      }
+
+      .sidebar {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .index {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-left: 1px solid var(--line);
+      }
+
+      .index a {
+        border-right: 1px solid var(--line);
+        padding: 10px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-summary,
+      .text-grid,
+      .split-map {
+        grid-template-columns: 1fr;
+      }
+
+      .split-map > div:first-child {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .flow .diagram-cell,
+      .arrow {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .flow .diagram-cell:last-child {
+        border-bottom: 0;
+      }
+
+      .timeline,
+      .rule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item,
+      .rule-grid > div {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .timeline-item:last-child,
+      .rule-grid > div:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .section-no {
+        width: 72px;
+      }
+
+      .compact-list {
+        grid-template-columns: 1fr;
+      }
+
+      .compact-list div,
+      .compact-list div:nth-child(2n),
+      .compact-list div:nth-last-child(-n + 2) {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .compact-list div:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @media print {
+      .page {
+        display: block;
+      }
+
+      .sidebar {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      section,
+      .hero {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <p class="brand-kicker">JAC Brand Strategy</p>
+      <h1>江淮新品牌<br>认知重建判断底座</h1>
+      <p class="sidebar-note">把《江淮品牌从 0 到 1》研究转化为命名、标识、视觉系统和品牌叙事的设计输入。</p>
+      <p class="index-title">章节索引</p>
+      <nav class="index" aria-label="章节索引">
+        <a href="#s01"><span class="index-number">01</span><span class="index-label">不是普通新品牌设计</span></a>
+        <a href="#s02"><span class="index-number">02</span><span class="index-label">三段身份变化</span></a>
+        <a href="#s03"><span class="index-number">03</span><span class="index-label">标识变化背后的问题</span></a>
+        <a href="#s04"><span class="index-number">04</span><span class="index-label">DEFINE 纳入判断</span></a>
+        <a href="#s05"><span class="index-number">05</span><span class="index-label">DEFINE 能与不能</span></a>
+        <a href="#s06"><span class="index-number">06</span><span class="index-label">继承什么，切开什么</span></a>
+        <a href="#s07"><span class="index-number">07</span><span class="index-label">命名、视觉、叙事启发</span></a>
+        <a href="#s08"><span class="index-number">08</span><span class="index-label">方向判断标准</span></a>
+        <a href="#summary"><span class="index-number">END</span><span class="index-label">从结论到设计动作</span></a>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="hero" id="top">
+        <div class="eyebrow">Internal Strategy Page</div>
+        <h2>不是做一套新视觉，而是重建消费者对江淮的判断。</h2>
+        <div class="hero-summary">
+          <div class="statement">
+            新品牌要把江淮从 <mark>可靠制造者</mark> 推向 <mark>具备中高端智能 SUV 能力的品牌</mark>。核心不是延续旧认知，而是选择性继承江淮的工程可信、底盘能力、制造根基和 DEFINE 的未来能力表达。
+          </div>
+          <div class="mini-panel">
+            <div>
+              <strong>页面使用方式</strong>
+              <p>每一章都回答两个问题：本页说明了什么，以及“然后呢”如何改变后续命名、标识、视觉和叙事判断。</p>
+            </div>
+            <div class="tag-row">
+              <span class="tag">认知重建</span>
+              <span class="tag">工程可信</span>
+              <span class="tag">DEFINE</span>
+              <span class="tag">中高端 SUV</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section id="s01">
+          <div class="section-head">
+            <div class="section-no">01</div>
+            <h2>这不是一次普通的新品牌设计</h2>
+          </div>
+
+          <div class="core">核心判断：江淮现在面对的问题，不是“起一个新名字”或“设计一个新 Logo”，而是 <mark>消费者认知重建</mark>。</div>
+
+          <div class="flow" aria-label="认知重建路径">
+            <div class="diagram-cell">
+              <span class="diagram-label">旧认知</span>
+              <span class="diagram-main">商用 / 实用 / 可靠</span>
+              <span class="diagram-note">制造强，但消费品牌弱；有信任来源，但豪华和情绪价值不足。</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="diagram-cell">
+              <span class="diagram-label">新任务</span>
+              <span class="diagram-main">重新建立判断</span>
+              <span class="diagram-note">不是让 JAC 更亮，而是解释江淮凭什么进入中高端智能 SUV。</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="diagram-cell">
+              <span class="diagram-label">目标认知</span>
+              <span class="diagram-main">中高端智能 SUV 能力</span>
+              <span class="diagram-note">既有制造根基，又能提供智能、空间、体验和身份感。</span>
+            </div>
+          </div>
+
+          <div class="text-grid">
+            <div class="logic-block">
+              <h3>为什么不是普通设计题</h3>
+              <p>江淮要做中高端智能 SUV，新品牌的第一任务不是延续用户对江淮过去的认知，而是重新建立用户对江淮的判断。过去的江淮更容易被理解为商用车、实用、可靠、制造能力强，但在消费端不够豪华，不够情绪化，也不够代表高端智能体验。</p>
+              <p>纯 JAC 高端化的风险在于，它能降低信任成本，却很难直接支撑中高端智能 SUV 所需要的豪华感、身份感和体验想象。JAC 可以解释“谁在背后造车”，但还不能单独解释“为什么用户要把它视为一个新的中高端选择”。</p>
+            </div>
+            <div class="logic-block">
+              <h3>必须完成的两个动作</h3>
+              <p>第一，继承江淮真实存在的能力，包括工程制造、底盘经验、承载能力、安全可靠、长期使用场景和智能新能源转型。没有这些，新品牌会像凭空包装出来的高端项目。</p>
+              <p>第二，切开江淮原有的消费心智，包括商用车、工具车、平价乘用车、多品牌摇摆，以及“江淮只是合作方或制造方”的被动印象。否则，新品牌再怎么命名和设计，也会被用户拉回旧江淮。</p>
+            </div>
+          </div>
+
+          <div class="callout">新品牌的任务不是让江淮看起来变新，而是让用户重新判断江淮是谁、凭什么进入中高端智能 SUV。</div>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>后续所有方案都要先回答“认知改造题”，再回答“设计好不好看”。每一个命名、标识或叙事方向，都要说明它想让用户放下哪一种旧江淮印象，又想建立哪一种新判断。</p>
+            <p>这会直接改变评审标准：不能只问“这个名字高级吗”“这个 Logo 科技吗”，而要问“它有没有让江淮从工具型制造认知，移动到中高端智能 SUV 认知”。如果一个方向只是让 JAC 看起来更亮、更锋利、更国际化，但没有解释新品牌为什么成立，就不应该进入下一轮。</p>
+          </div>
+        </section>
+
+        <section id="s02">
+          <div class="section-head">
+            <div class="section-no">02</div>
+            <h2>三段身份变化到底意味着什么</h2>
+          </div>
+
+          <div class="core">核心判断：江淮真正可用的不是某一个旧符号，而是它已经具备的 <mark>工程可信</mark>；新品牌要解决的问题，是如何把这种可信转化为用户对中高端智能 SUV 的信任。</div>
+
+          <div class="timeline" aria-label="三段身份变化">
+            <div class="timeline-item">
+              <span>第一段</span>
+              <b>工程制造信用</b>
+              <p>来自商用车、客车底盘、轻卡、重卡和可靠制造。可解释安全、承载、耐久和长途稳定。</p>
+            </div>
+            <div class="timeline-item">
+              <span>第二段</span>
+              <b>乘用车探索</b>
+              <p>瑞风、和悦、思皓、钇为说明江淮长期探索乘用车，但也暴露品牌主线不稳定。</p>
+            </div>
+            <div class="timeline-item">
+              <span>第三段</span>
+              <b>智能新能源再定义</b>
+              <p>2023 年新 JAC、钇为和 DI 平台说明江淮开始从可靠制造转向可信智能。</p>
+            </div>
+          </div>
+
+          <h3>第一段：工程制造信用</h3>
+          <p>江淮最早的信任来源，不是轿车，不是豪华，也不是新能源，而是商用车、客车底盘、轻卡、重卡和可靠制造。它的根基是能造、能承载、能规模化、能经受长期使用。</p>
+          <p>这对新品牌有直接帮助。中高端大型 SUV 不只是外观和座舱的生意，也需要底盘、安全、车身、空间、耐久、长途稳定性和全场景可靠性。江淮的工程制造信用，可以为这些能力提供真实来源。</p>
+          <p>但它也有明显局限。工程制造只能证明江淮会造车，不能自动证明江淮懂豪华。商用车和底盘经验如果不重新翻译，很容易被用户理解成工具车、耐用车、运营车，而不是高端智能 SUV。</p>
+
+          <h3>第二段：乘用车探索</h3>
+          <p>瑞风、和悦、思皓、钇为说明，江淮并不是今天才想进入乘用车。它长期尝试过 MPV、家用轿车、合资新能源、自主新能源和乘用车品牌归拢。</p>
+          <p>乘用车探索到 2016 年时，已经暴露出一个更深的问题：江淮不是没有产品，而是产品和识别线索太多。瑞风、瑞鹰、宾悦、同悦、和悦、悦悦等名称各自承担过不同任务，但对外部用户来说，它们都属于江淮，却很难判断哪一个真正代表江淮乘用车的主线。</p>
+          <p>2012 年“瑞风 + 和悦”双品牌运营，本质上就是一次收束尝试：瑞风承接 MPV、商务、多功能和后来的 SUV，和悦承接轿车和家用车。但这种分线并没有完全解决母品牌识别分散的问题。</p>
+          <p>所以 2016 年盾牌 JAC / “回归一个 JAC”，可以理解为乘用车探索阶段的一次识别回收。江淮意识到，继续让不同车型、系列和阶段性符号各自讲故事，会削弱母品牌主线。五星标能讲早期自主乘用车的精神，但不够适合承接新能源合作、国际化、技术升级和更统一的 JAC 识别。</p>
+          <p>瑞风有效，是因为它从真实场景里长出来。它先有商务车、MPV、多人乘坐、空间和接待需求，再逐渐沉淀成品牌资产。和悦和思皓的问题，则提醒新品牌不能只是内部产品管理工具；品牌角色一旦漂移，名字和视觉本身很难站住。</p>
+
+          <h3>第三段：智能新能源再定义</h3>
+          <p>2023 年江淮发布乘用车新标、全新品牌战略、江淮钇为和 DI 平台，说明江淮已经意识到，仅靠老制造信用不够。智能新能源时代，用户会问的不只是“你能不能造车”，而是“你有没有平台、软件、座舱、智驾、补能、生态和持续迭代能力”。</p>
+          <p>这一段身份对新品牌很重要。它说明江淮已经开始从“可靠制造”向“可信智能”转变。新品牌如果要进入中高端 SUV 市场，就不能只强调江淮有历史、有工厂、有底盘，而要进一步证明江淮能把这些能力组织成智能豪华体验。</p>
+          <p>智能化不能只停在口号。用户不会因为“以智能领导智能”几个字相信一个新品牌，也不会因为发布了平台名就接受中高端定位。智能必须被产品、座舱、HMI、底盘体验、辅助驾驶、服务体系和长期可靠性证明。</p>
+
+          <div class="callout">三段身份变化说明，江淮真正可用的不是某个旧符号，而是已经存在的工程可信；新品牌的任务，是把这种可信进一步转化为用户对中高端智能 SUV 的接受和信任。</div>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>这三段身份不是历史摘要，而是资产筛选器。工程制造信用可以进入新品牌，因为它能解释底盘、安全、承载和长期可靠；乘用车探索中的混乱不能照搬，因为它会提醒用户江淮过去品牌主线不稳定；智能新能源转向可以作为方向，但必须由真实产品和体验继续证明。</p>
+            <p>所以后续做方向时，要把“可继承资产”和“不可继承心智”分开。能进入命名和叙事的是工程可信、空间场景、智能平台和未来体验；不能进入主表达的是工具车、平价车、多品牌摇摆和阶段性包装。每个方向都要说明自己从哪一段身份取资产，又切开哪一段身份的包袱。</p>
+          </div>
+        </section>
+
+        <section id="s03">
+          <div class="section-head">
+            <div class="section-no">03</div>
+            <h2>江淮几次标识变化背后的真实问题</h2>
+          </div>
+
+          <div class="core">核心判断：江淮每次换标，本质上都是在重新回答 <mark>我是谁</mark>、<mark>靠什么被信任</mark>、<mark>要进入哪个新阶段</mark>。</div>
+
+          <div class="flow" aria-label="标识变化逻辑">
+            <div class="diagram-cell">
+              <span class="diagram-label">五星标阶段</span>
+              <span class="diagram-main">乘用车初期精神包装</span>
+              <span class="diagram-note">自主、奋斗、公务商务突破、瑞风阶段成果。</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="diagram-cell">
+              <span class="diagram-label">2016 盾牌 JAC</span>
+              <span class="diagram-main">识别统一和国际化</span>
+              <span class="diagram-note">把分散乘用车识别收回到母品牌 JAC。</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="diagram-cell">
+              <span class="diagram-label">2023 新 JAC</span>
+              <span class="diagram-main">智能化再定义</span>
+              <span class="diagram-note">把老制造品牌推向智能新能源组织能力。</span>
+            </div>
+          </div>
+
+          <h3>五星标阶段：乘用车初期的精神包装</h3>
+          <p>关于五星标，需要保持证据边界。更稳妥的说法是：五星标至少在 2006-2007 年瑞风/乘用车传播周期中，已经作为江淮乘用车相关标识被公开解释。</p>
+          <p>这个阶段的江淮正在尝试从商用车和底盘能力，进入公务商务、MPV、SUV 和乘用车市场。五星标承担的不是母品牌创立原点，而是乘用车初期的精神包装。它把自主、奋斗、红色精神、公务商务突破和瑞风阶段的乘用车探索，压缩成一个容易记忆的符号。</p>
+          <p>对今天的启发是：五星标的价值在于说明江淮曾经需要一个精神化、可识别、能帮助乘用车突破的符号。但它不适合直接支撑当代中高端智能 SUV。因为今天的问题已经不是“自主品牌能不能进入乘用车”，而是“江淮能不能让用户相信它有资格做智能豪华”。</p>
+
+          <h3>2016 盾牌 JAC 阶段：识别统一和国际化</h3>
+          <p>到 2016 年，江淮发布乘用车全新 logo，外部报道用“回归一个 JAC”解释这一动作。放在标识层面看，盾牌 JAC 的意义在于把前一阶段已经暴露出的乘用车识别分散问题，转化为一个更统一、更国际化、更适合合作与新能源转型的母品牌识别。</p>
+          <p>它不是继续强化五星标的精神叙事，而是把重点转向 JAC 的集团识别、制造来源和合作语境。这个动作也和江淮当时面对的新能源转向、技术升级、国际传播和合作关系有关。</p>
+          <p>对今天的启发是：JAC 有价值，但它更适合做背书。它简洁、国际化、能连接母品牌，也能解释制造来源。但 JAC 本身缺少足够的豪华情绪和高端消费人格。新品牌如果只做“JAC 高端版”，容易降低信任成本，却无法充分打开中高端 SUV 的想象空间。</p>
+
+          <h3>2023 新 JAC 阶段：智能化再定义</h3>
+          <p>2023 年江淮发布乘用车新标和“以智能领导智能”的全新品牌战略，同时推出江淮钇为和 DI 平台。这一次变化不能理解为单纯视觉更新。它背后是母品牌、乘用车架构和新能源平台表达的一次整体重组。</p>
+          <p>这个阶段，江淮要解决的问题已经变成：老制造品牌如何进入智能新能源竞争。用户不只问它会不会造车，也不只问它是不是老牌车企，而是问它有没有智能架构、智能座舱、智能驾驶、平台能力和未来产品组织能力。</p>
+          <p>对今天的启发是：新品牌必须有技术和体验承接。换标、命名和视觉可以打开注意力，但如果没有产品、平台、座舱、底盘和服务证明，高端化就会被看成包装。</p>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>后续新标识不能只被当成造型任务，而要被当成一个认知问题的答案。设计提案时必须先写清楚：这个标识在解决什么问题，是降低信任成本、建立中高端感、表达智能能力，还是切开旧江淮心智。</p>
+            <p>这也意味着不能简单复刻旧五星标、盾牌 JAC 或 2023 新标的视觉逻辑。旧标识可以提供“江淮如何应对阶段转型”的方法，但不能直接提供新品牌的答案。新品牌标识必须有自己的主语，同时让 JAC 作为制造和工程背书存在。</p>
+          </div>
+        </section>
+
+        <section id="s04">
+          <div class="section-head">
+            <div class="section-no">04</div>
+            <h2>DEFINE 为什么必须纳入新品牌判断</h2>
+          </div>
+
+          <div class="core">核心判断：DEFINE 不是产品品牌，也不是市场品牌，但它改变了江淮的 <mark>想象空间</mark>。</div>
+
+          <p>DEFINE 的价值，不在于它是不是一个可以直接销售的品牌，而在于它把江淮的智能新能源转型变得可视化。2023 年江淮提出“以智能领导智能”，但这句话本身比较抽象。DEFINE 用概念车、原型车、智能座舱、HMI、平台语言和设计奖项，把这个战略姿态变成了看得见、可讨论、可传播的东西。</p>
+          <p>按照现有资料，DEFINE 被集中前台化的早期节点，是 2024 年江淮技术愿景概念车的公开传播。此后，DEFINE 从单台技术愿景概念车，进一步扩展到 DEFINE 平台、DEFINE-S、DEFINE-X，以及 3D 场景化智能座舱 HMI。它持续围绕智能架构、智慧底盘、智能座舱、智能驾驶、设计语言和未来交互体验展开。</p>
+
+          <div class="compact-list" aria-label="DEFINE 的四种作用">
+            <div><b>技术愿景</b><br>把智能架构、智慧底盘、智能座舱、智能驾驶集中表达。</div>
+            <div><b>设计语言</b><br>用概念车和原型车展示江淮未来车的比例、姿态和空间。</div>
+            <div><b>用户体验</b><br>用 HMI 和沉浸式座舱说明智能可被看见和触摸。</div>
+            <div><b>认知改变</b><br>让江淮不只被理解为传统制造企业，也进入未来汽车体验语境。</div>
+          </div>
+
+          <p>这对江淮很重要。因为如果只讲 JAC，容易显得太集团化；只讲钇为，容易被理解为 A0/A 级纯电小车；只讲瑞风，容易回到 MPV 和商务出行；只讲尊界，又容易让外界认为核心光环来自合作方。DEFINE 提供了一个更偏江淮自身的技术愿景表达：它不直接抢产品品牌的位置，但能把江淮想证明的智能新能源能力提前视觉化。</p>
+          <p>尤其是 DEFINE-X。它被描述为 5 米级 6 座 SUV，聚焦空间、户外、旅行和多场景生活方式。这和中高端 SUV 新品牌有直接关系。它至少说明，江淮已经在用概念和原型方式思考大型 SUV 的空间、姿态、智能座舱和未来体验。</p>
+
+          <div class="callout">DEFINE 的意义不是多了一个名字，而是让江淮第一次比较集中地展示“我也能定义智能新能源车的未来体验”。</div>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>DEFINE 要被用作能力证据，而不是新品牌名称候选。后续可以从 DEFINE 中提取未来设计语言、座舱体验、平台感和智能交互线索，用来证明江淮并不只停留在传统制造。</p>
+            <p>但使用 DEFINE 时要保持边界：它适合放在“江淮正在形成未来能力”的证据链里，不适合作为面向消费者的主品牌。新品牌需要把 DEFINE 的未来感转化成可购买、可理解、可持续体验的产品价值。</p>
+          </div>
+        </section>
+
+        <section id="s05">
+          <div class="section-head">
+            <div class="section-no">05</div>
+            <h2>DEFINE 对新品牌有什么帮助，又不能解决什么</h2>
+          </div>
+
+          <div class="core">核心判断：DEFINE 可以作为新品牌的能力证据和设计语言来源，但不能直接成为新品牌本身。</div>
+
+          <div class="split-map">
+            <div>
+              <h3>可以提供什么</h3>
+              <ul>
+                <li>未来设计语言来源：造型、比例、空间、灯语、座舱和交互。</li>
+                <li>智能座舱和 HMI 体验证据：界面、导航、车控、娱乐、驾驶辅助和空间交互。</li>
+                <li>平台化表达：不同车身形态、技术模块和设计语言的组织能力。</li>
+                <li>国际化表达：进入国际设计、车展和技术传播语境。</li>
+                <li>想象力改变：帮助江淮摆脱只会做工具车或商务车的旧印象。</li>
+              </ul>
+            </div>
+            <div>
+              <h3>不能解决什么</h3>
+              <ul>
+                <li>不是用户购买理由本身，必须被量产产品承接。</li>
+                <li>不能直接替代新品牌名称。</li>
+                <li>不能只停留在概念车、红点奖和展台语言。</li>
+                <li>如果量产体验落差太大，会反向损害信任。</li>
+                <li>不适合作为面向大众消费的主品牌名。</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>DEFINE 对新品牌最有价值的地方，是它可以补上江淮过去相对欠缺的“未来感”。江淮传统资产很实在，但容易偏工程、偏制造、偏工具。DEFINE 则把江淮带到另一个语境：未来技术、概念设计、沉浸式座舱、HMI、平台边界、智能新能源体验。</p>
+          <p>对中高端 SUV 新品牌来说，DEFINE 至少可以提供五类输入：未来设计语言来源、智能座舱和 HMI 体验证据、平台化表达、国际化表达，以及帮助江淮摆脱只会做工具车或商务车的旧印象。</p>
+          <p>但 DEFINE 也有明确边界。用户最终不会只因为概念车或红点奖购买一台中高端 SUV。它必须被量产产品、真实座舱、底盘体验、辅助驾驶、服务体系和长期可靠性承接。</p>
+
+          <div class="callout">DEFINE 可以作为新品牌的能力证据和设计语言来源，但不能直接成为新品牌本身。</div>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>后续概念方向需要标注哪些内容来自 DEFINE：是造型比例、智能座舱、HMI、平台边界，还是未来科技语气。这样做可以避免把 DEFINE 当作一个笼统的“高级感来源”，也能让设计输入更具体。</p>
+            <p>同时，每个使用 DEFINE 的方向都要回答“量产如何承接”。如果一个方向只借用了概念车、奖项和未来感，却说不清新品牌量产车如何兑现座舱、底盘、空间和智能体验，它就不能成为主方向。</p>
+          </div>
+        </section>
+
+        <section id="s06">
+          <div class="section-head">
+            <div class="section-no">06</div>
+            <h2>新品牌应该继承什么，切开什么</h2>
+          </div>
+
+          <div class="core">核心判断：新品牌不是抛弃江淮，而是选择性继承江淮；<mark>继承可信资产</mark>，<mark>切开旧消费认知</mark>。</div>
+
+          <p>江淮做新品牌，不能完全否认母品牌。完全切断 JAC，会失去最真实的制造、底盘、工程和组织能力来源。但也不能完全延续 JAC。完全延续 JAC，又会把用户带回商用车、平价车和工具车认知。</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>应继承的资产</th>
+                  <th>为什么可用</th>
+                  <th>如何转译给新品牌</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>工程可信</td>
+                  <td>江淮最真实的根基</td>
+                  <td>转译为大型 SUV 的安全、稳定、耐久和长途信任</td>
+                </tr>
+                <tr>
+                  <td>底盘、承载、制造经验</td>
+                  <td>与大型 SUV 的产品价值相关</td>
+                  <td>转译为工程豪华、底盘豪华、全场景可靠</td>
+                </tr>
+                <tr>
+                  <td>瑞风的多人出行经验</td>
+                  <td>与空间、接待、家商场景相关</td>
+                  <td>转译为 6 座、家庭、商务、远行的场景理解</td>
+                </tr>
+                <tr>
+                  <td>2023 后智能新能源转向</td>
+                  <td>说明江淮已开始重构能力表达</td>
+                  <td>转译为可信智能，而不是泛智能口号</td>
+                </tr>
+                <tr>
+                  <td>DEFINE 的未来能力表达</td>
+                  <td>补足未来感和设计想象</td>
+                  <td>转译为未来平台、智能座舱、HMI、设计语言</td>
+                </tr>
+                <tr>
+                  <td>JAC 的制造背书和国际识别</td>
+                  <td>能降低信任成本</td>
+                  <td>作为背书出现，而不是独自承担高端人格</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>需要切开的旧心智</th>
+                  <th>为什么必须切开</th>
+                  <th>设计和叙事上的处理</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>商用车 / 工具车心智</td>
+                  <td>会限制中高端 SUV 的豪华感和身份感</td>
+                  <td>少讲工具属性，多讲工程带来的舒适、安全和确定性</td>
+                </tr>
+                <tr>
+                  <td>平价乘用车心智</td>
+                  <td>会拉低中高端认知</td>
+                  <td>新命名、新视觉、新渠道和新叙事要与旧乘用车拉开距离</td>
+                </tr>
+                <tr>
+                  <td>多品牌频繁变化</td>
+                  <td>会让用户怀疑稳定性</td>
+                  <td>新品牌角色必须清楚，不能再承担临时归拢任务</td>
+                </tr>
+                <tr>
+                  <td>只是合作方 / 代工方</td>
+                  <td>会让主语被别人拿走</td>
+                  <td>必须讲清江淮自身的工程、平台和体验能力</td>
+                </tr>
+                <tr>
+                  <td>概念车式高端化</td>
+                  <td>容易停留在展台语言</td>
+                  <td>必须把 DEFINE 能力落到量产产品证据</td>
+                </tr>
+                <tr>
+                  <td>旧标识精神包装</td>
+                  <td>与当代智能豪华不完全匹配</td>
+                  <td>不复刻旧符号，而是提炼其背后的转型逻辑</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>这两张表要变成后续方案评审清单。每个命名、视觉、叙事方向都要逐项回答：它继承了哪一个江淮可信资产，又主动切开了哪一个旧消费认知。</p>
+            <p>如果一个方案只继承了江淮，但没有切开工具车、平价车、合作方阴影和多品牌混乱，它会变成旧江淮换壳。如果一个方案只切开江淮，却没有继承工程、底盘、制造和 DEFINE 能力，它又会变成凭空高端化。真正可用的方向必须同时完成“继承”和“切开”。</p>
+          </div>
+        </section>
+
+        <section id="s07">
+          <div class="section-head">
+            <div class="section-no">07</div>
+            <h2>对命名、视觉和叙事的直接启发</h2>
+          </div>
+
+          <div class="core">核心判断：后续所有命名、标识和叙事，都要服务同一个问题：如何让用户相信江淮的新品牌不是旧认知换壳，而是真正进入智能豪华的新入口。</div>
+
+          <div class="rule-grid" aria-label="四类设计判断">
+            <div>
+              <b>命名</b>
+              <p>名字要承担第一句战略说明。它必须指向工程智能、可信豪华、旗舰 SUV、家庭/商务/远行，或江淮交汇所代表的连接与新边界。</p>
+            </div>
+            <div>
+              <b>Logo / 标识</b>
+              <p>标识要有可拥有的意象来源，不能只是光束、箭头、无限符号、普通几何弧线，也不能只是把 JAC 字母重新装饰一遍。</p>
+            </div>
+            <div>
+              <b>视觉系统</b>
+              <p>视觉不只有车标，还包括中文字标、英文字标、品牌色、材质、展厅语言、车机界面、App 图标、发布会视觉和传播排版。</p>
+            </div>
+            <div>
+              <b>品牌叙事</b>
+              <p>叙事不能从“我们发布了一个新品牌”开始，而要从“江淮为什么现在有资格进入中高端智能 SUV”开始。</p>
+            </div>
+          </div>
+
+          <p>不建议直接做纯 JAC 高端化命名。JAC 有背书价值，但高端情绪不足。不建议使用过度生僻、过度技术化或过度概念化的词，因为钇为和 DEFINE 都说明，技术词可以建立专业感，但也会增加普通用户的理解成本。</p>
+          <p>可考虑的标识意象来源包括：江淮交汇、工程结构、承载核心、智能中枢、门庭礼序、未来平台、道路与边界、稳定轴线。这些意象都能连接江淮资产和中高端 SUV 语境。</p>
+          <p>视觉气质建议围绕三个关键词展开：稳定、智能、克制。稳定来自工程和底盘，智能来自平台和座舱，克制用于避免过度炫技和过度装饰。</p>
+          <p>推荐叙事主线是：从工程底色，到智能平台，到未来体验。第一层讲江淮不是凭空造车，它有长期制造、底盘和承载能力。第二层讲这些能力正在被智能新能源平台重新组织。第三层讲 DEFINE 和新品牌将这些能力推向未来座舱、智能体验和中高端 SUV 场景。</p>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>这一章要变成后续创作 brief。命名方向要回答“这个名字为什么必须存在”；标识方向要回答“这个符号从江淮哪个可拥有资产里来”；视觉系统要回答“它如何同时避开商用车感和通用新能源感”；品牌叙事要回答“它如何解释江淮进入中高端 SUV 的资格”。</p>
+            <p>因此，下一步不是先出大量名字或图形，而是先为每个方向建立一句清楚的战略说明。没有这句话的方向，即使视觉完成度高，也只是风格尝试，不是品牌方向。</p>
+          </div>
+        </section>
+
+        <section id="s08">
+          <div class="section-head">
+            <div class="section-no">08</div>
+            <h2>新品牌方向判断标准</h2>
+          </div>
+
+          <div class="core">核心判断：任何方向都要能同时回答 <mark>来源</mark>、<mark>切割</mark>、<mark>定位</mark>、<mark>识别</mark> 和 <mark>兑现</mark> 五个问题。</div>
+
+          <p>后续无论提出多少命名方向、视觉方向或品牌叙事方向，都不应只用“高级不高级”“好不好看”“有没有科技感”来判断。真正要判断的是这个方向能不能帮助江淮完成认知重建。</p>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>判断问题</th>
+                  <th>为什么重要</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>它继承了江淮哪一项真实资产？</td>
+                  <td>防止新品牌变成凭空包装</td>
+                </tr>
+                <tr>
+                  <td>它切开了江淮哪一项旧心智？</td>
+                  <td>防止用户把新品牌拉回旧江淮</td>
+                </tr>
+                <tr>
+                  <td>它能否支撑中高端 SUV？</td>
+                  <td>防止方向只适合普通新能源或低价产品</td>
+                </tr>
+                <tr>
+                  <td>它能否形成清楚的名称、标识和叙事？</td>
+                  <td>防止策略成立但无法设计落地</td>
+                </tr>
+                <tr>
+                  <td>它能否被量产产品和体验持续证明？</td>
+                  <td>防止停留在概念、奖项和发布会语言</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>维度</th>
+                  <th>推荐判断</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>主轴</td>
+                  <td>工程豪华 + 可信智能</td>
+                </tr>
+                <tr>
+                  <td>来源</td>
+                  <td>江淮交汇 / 工程制造 / DEFINE 未来能力</td>
+                </tr>
+                <tr>
+                  <td>母品牌关系</td>
+                  <td>新品牌独立命名，JAC 做制造与工程背书</td>
+                </tr>
+                <tr>
+                  <td>DEFINE 角色</td>
+                  <td>能力证据和未来语言来源，不作为直接市场品牌</td>
+                </tr>
+                <tr>
+                  <td>视觉方向</td>
+                  <td>工程稳定感与智能未来感平衡</td>
+                </tr>
+                <tr>
+                  <td>叙事方向</td>
+                  <td>从工程底色，到智能平台，到未来体验</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout">江淮新品牌的真正任务，是推动用户把江淮从“可靠制造者”，重新理解为具备中高端智能 SUV 能力的品牌。</div>
+
+          <div class="then">
+            <span class="then-title">然后呢：对后续工作的作用</span>
+            <p>这一章就是后续筛选工具。所有命名、标识、视觉和叙事方案，都要用这五个问题过一遍：来源、切割、定位、识别、兑现。不能通过这五项的方向，不进入客户评审。</p>
+            <p>最终评审时，不建议只展示“方向名称 + 氛围图 + Logo”。每个方向都应该同时呈现：它继承的江淮资产、它切开的旧心智、它的名称逻辑、它的视觉意象、它需要产品如何证明。这样客户看到的不是若干风格，而是若干条可判断的品牌路径。</p>
+          </div>
+        </section>
+
+        <section id="summary">
+          <div class="section-head">
+            <div class="section-no">END</div>
+            <h2>从研究结论到设计动作</h2>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>研究发现</th>
+                  <th>不是为了说明什么</th>
+                  <th>然后要用于判断什么</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>江淮真正可用的是工程可信</td>
+                  <td>不是说老江淮可以直接高端化</td>
+                  <td>判断新方向是否能把工程可信转成中高端 SUV 的安全、稳定和体验信任</td>
+                </tr>
+                <tr>
+                  <td>乘用车探索暴露了识别分散</td>
+                  <td>不是否定江淮做乘用车的经验</td>
+                  <td>判断新品牌是否有稳定角色，是否避免再次成为临时归拢工具</td>
+                </tr>
+                <tr>
+                  <td>2016 回归 JAC 是识别回收</td>
+                  <td>不是说新品牌也要直接叫 JAC</td>
+                  <td>判断 JAC 应该做背书还是主角，以及新品牌与母品牌的距离</td>
+                </tr>
+                <tr>
+                  <td>旧标识反映阶段性问题</td>
+                  <td>不是为了复刻五星标或盾牌 JAC</td>
+                  <td>判断新标识是否回答了当前的新认知问题</td>
+                </tr>
+                <tr>
+                  <td>DEFINE 提供未来能力表达</td>
+                  <td>不是把 DEFINE 当作消费者品牌</td>
+                  <td>判断新品牌是否能借用其设计、座舱、平台和未来体验证据</td>
+                </tr>
+                <tr>
+                  <td>新品牌要选择性继承江淮</td>
+                  <td>不是抛弃母品牌，也不是完全沿用母品牌</td>
+                  <td>判断每个方向是否同时完成“继承可信资产”和“切开旧认知”</td>
+                </tr>
+                <tr>
+                  <td>命名、视觉、叙事必须同题</td>
+                  <td>不是分别做名字、Logo 和文案</td>
+                  <td>判断一个方向是否有统一的品牌主语和可持续表达系统</td>
+                </tr>
+                <tr>
+                  <td>方向评审要看兑现能力</td>
+                  <td>不是只看高级感和科技感</td>
+                  <td>判断方案是否能被量产产品、座舱、底盘、智能体验和服务证明</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="footer-space"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
