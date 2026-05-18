@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>全量汽车 Logo 研究筛选台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-symbol">L</span>
+        <span>Logo Explorer</span>
+      </a>
+      <nav class="topnav" aria-label="页面导航">
+        <a href="#positioning">定位</a>
+        <a href="#filters">筛选</a>
+        <a href="#grid">图库</a>
+        <a href="#notes">说明</a>
+      </nav>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Car Brand Mark Research</p>
+          <h1>全量汽车 Logo 研究筛选台</h1>
+          <p class="lead">
+            基于公开车标数据集建立可筛选的研究视图，按地区、成立时间、视觉内容和外形结构快速比较汽车品牌标识。
+          </p>
+        </div>
+        <div class="source-panel" aria-label="数据来源">
+          <p>数据源</p>
+          <a href="https://github.com/filippofilip95/car-logos-dataset" target="_blank" rel="noreferrer">
+            filippofilip95/car-logos-dataset
+          </a>
+          <span>图片远程引用，研究元数据本地维护。</span>
+        </div>
+      </section>
+
+      <section id="positioning" class="position-section">
+        <div class="position-heading">
+          <div>
+            <p class="eyebrow">Price Positioning</p>
+            <h2>品牌价格定位轴</h2>
+          </div>
+          <p>
+            展示本地素材和网络数据中已补充定位信息的品牌。位置基于公开车型价位、品牌官方表述和市场常识做粗略归类，可拖动调整，不代表精确成交价。
+          </p>
+        </div>
+        <div class="axis-labels" aria-hidden="true">
+          <span>更亲民 / 大众化</span>
+          <span>中端 / 主流</span>
+          <span>高端 / 豪华</span>
+          <span>超豪华 / 跑车</span>
+        </div>
+        <div class="axis-scroll">
+          <div id="positionAxis" class="position-axis" aria-label="品牌价格定位轴"></div>
+        </div>
+        <div class="axis-footnote">
+          <span id="positionCount">-</span>
+          <span>个品牌已加入横轴；本地图片优先覆盖远程图片，拖动后的位置会保存在当前浏览器。</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Logo 研究工作区">
+        <aside id="filters" class="filters">
+          <div class="filter-head">
+            <div>
+              <p class="eyebrow">Filters</p>
+              <h2>筛选条件</h2>
+            </div>
+            <button id="resetBtn" class="icon-button" type="button" aria-label="重置筛选" title="重置筛选">↺</button>
+          </div>
+
+          <label class="search-field">
+            <span>搜索品牌 / slug / 国家地区</span>
+            <input id="searchInput" type="search" placeholder="例如 BMW、toyota、中国" autocomplete="off" />
+          </label>
+
+          <label class="select-field">
+            <span>排序</span>
+            <select id="sortSelect">
+              <option value="nameAsc">品牌名 A-Z</option>
+              <option value="yearAsc">成立年份 早到晚</option>
+              <option value="yearDesc">成立年份 晚到早</option>
+            </select>
+          </label>
+
+          <details open>
+            <summary>地区</summary>
+            <div id="regionFilters" class="check-grid"></div>
+          </details>
+
+          <details open>
+            <summary>成立年代</summary>
+            <div id="yearFilters" class="check-grid"></div>
+          </details>
+
+          <details>
+            <summary>Logo 内容</summary>
+            <div id="contentFilters" class="check-grid"></div>
+          </details>
+
+          <details>
+            <summary>Logo 形状</summary>
+            <div id="shapeFilters" class="check-grid"></div>
+          </details>
+
+          <details>
+            <summary>数据状态</summary>
+            <div id="confidenceFilters" class="check-grid"></div>
+          </details>
+        </aside>
+
+        <section class="results" aria-live="polite">
+          <div class="stats-bar">
+            <div class="stat">
+              <span id="totalCount">-</span>
+              <p>总 Logo</p>
+            </div>
+            <div class="stat accent">
+              <span id="visibleCount">-</span>
+              <p>当前结果</p>
+            </div>
+            <div class="stat">
+              <span id="verifiedCount">-</span>
+              <p>已校对</p>
+            </div>
+            <div class="stat warn">
+              <span id="todoCount">-</span>
+              <p>待补充</p>
+            </div>
+          </div>
+
+          <div id="activeFilters" class="active-filters" aria-label="当前筛选"></div>
+          <div id="statusMessage" class="status-message">正在加载远程车标数据...</div>
+          <div id="grid" class="logo-grid" aria-label="Logo 列表"></div>
+          <div id="emptyState" class="empty-state" hidden>
+            <h2>没有匹配结果</h2>
+            <p>调整筛选条件，或重置后查看全部车标。</p>
+            <button id="emptyResetBtn" class="primary-button" type="button">重置筛选</button>
+          </div>
+        </section>
+      </section>
+
+      <section id="notes" class="notes">
+        <div>
+          <p class="eyebrow">Notes</p>
+          <h2>研究数据说明</h2>
+        </div>
+        <p>
+          本页保证全量展示远程仓库中的品牌 logo。地区、成立年份和视觉分类由本地元数据表补充；
+          未校对品牌不会被隐藏，而是进入“待补充”状态，方便后续继续完善。
+        </p>
+      </section>
+    </main>
+
+    <script src="./brand-metadata.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
